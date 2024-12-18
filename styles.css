@@ -363,17 +363,4 @@ button:hover {
   color: #8b949e;
   pointer-events: none;
 }
-/* Set the Logo as Background */
-/* Set the Logo as Background */
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url("assets/NoteNest_Logo_Scaled.png") no-repeat center center;
-  background-size: 150px; /* Adjust logo size */
-  font-family: Arial, sans-serif;
-  color: #e6edf3;
-}
+
