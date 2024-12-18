@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note</title>
+    <!-- FontAwesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <ul>
+          <li class="active" data-category="all">
+            <i class="fas fa-sticky-note" title="All Notes"></i>
+            <span class="category-name">All Notes</span>
+          </li>
+          <li data-category="favorites">
+            <i class="fas fa-star" title="Favorites"></i>
+            <span class="category-name">Favorites</span>
+          </li>
+          <li data-category="important">
+            <i class="fas fa-exclamation-circle" title="Important"></i>
+            <span class="category-name">Important</span>
+          </li>
+          <li data-category="drafts">
+            <i class="fas fa-pencil-alt" title="Drafts"></i>
+            <span class="category-name">Drafts</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <h1>📝 NoteNest</h1>
+
+        <!-- Note Input Section -->
+        <div class="note-input">
+          <textarea id="note" placeholder="Write your note here..."></textarea>
+          <select id="category">
+            <option value="favorites">Favorites</option>
+            <option value="important">Important</option>
+            <option value="drafts">Draft</option>
+          </select>
+          <button id="save-btn">Save Note</button>
+        </div>
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search notes by name..."
+          />
+          <i class="fas fa-search"></i>
+        </div>
+
+        <!-- Notes Section -->
+        <h2 id="current-category-title">All Notes</h2>
+        <div id="notes-container"></div>
+      </div>
+
+      <!-- Custom Modal -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <h3>Enter Note Name</h3>
+          <input type="text" id="note-name-input" placeholder="Note Name" />
+          <div class="modal-buttons">
+            <button id="modal-save-btn">Save</button>
+            <button id="modal-cancel-btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
